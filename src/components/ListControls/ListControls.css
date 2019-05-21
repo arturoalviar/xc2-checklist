@@ -1,0 +1,64 @@
+.xc2-list-controls {
+  background: #fff;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.xc2-settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button.xc2-settings-toggle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: bold;
+  outline: 0;
+  padding: 10px 15px;
+}
+
+.octicon {
+  transition: color 0.4s ease-in-out;
+}
+
+button.xc2-settings-toggle.is-active .octicon {
+  color: var(--color-main);
+}
+
+.blade-list-control {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.blade-list-control.is-checkbox label {
+  cursor: pointer;
+}
+
+.blade-list-control label {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+@media all and (min-width: 768px) {
+  .blade-list-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .blade-list-control {
+    margin-bottom: 0;
+  }
+  button.xc2-settings-toggle {
+    padding: 10px 0 10px 15px;
+  }
+
+  .xc2-settings-container {
+    justify-content: flex-end;
+  }
+}

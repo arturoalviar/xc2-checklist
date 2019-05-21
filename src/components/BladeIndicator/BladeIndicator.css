@@ -1,0 +1,99 @@
+.blade-obtained {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blade-obtained label {
+  cursor: pointer;
+}
+
+.blade-obtained::before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.blade-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.blade-image {
+  background: #fff;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out;
+}
+
+.blade-indicator-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.blade-indicator {
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  z-index: 10;
+}
+
+.blade-indicator-obtained {
+  background: var(--color-main);
+  border-radius: 50%;
+  box-shadow: var(--shadow-accent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.blade-obtained
+  input[type="checkbox"]:checked
+  + label
+  .blade-indicator-obtained {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.blade-obtained input[type="checkbox"]:checked + label .blade-image {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+@media all and (min-width: 768px) {
+  .blade-indicator {
+    bottom: -24px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .blade-indicator-obtained {
+    width: 36px;
+    height: 36px;
+  }
+}

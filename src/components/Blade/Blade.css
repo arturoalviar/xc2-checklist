@@ -1,0 +1,87 @@
+.blade {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.blade.is-spoiler::before,
+.blade.is-dlc::before,
+.blade.is-new-game-plus::before {
+  font-size: 0.5rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.blade.is-spoiler::before {
+  background: var(--color-accent);
+  color: #ffffff;
+  content: "spoiler";
+}
+
+.blade.is-dlc::before {
+  background: var(--color-third);
+  content: "DLC";
+}
+
+.blade.is-new-game-plus::before {
+  background: var(--color-main);
+  color: #ffffff;
+  content: "new game+";
+}
+
+.blade-description {
+  padding: 20px;
+  position: relative;
+}
+
+.blade-name {
+  position: relative;
+  margin-top: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.blade-info {
+  font-size: 0.75rem;
+}
+
+.blade-role {
+  text-transform: uppercase;
+}
+
+.blade-type {
+  text-transform: capitalize;
+}
+
+.blade input[type="checkbox"] {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  .blade {
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+  }
+
+  .blade-name {
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .blade {
+    max-width: 400px;
+  }
+  .blade-info {
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+}

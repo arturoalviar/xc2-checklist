@@ -1,0 +1,4 @@
+.blade-list-controls.xc2-user-settings {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 15px;
+}
