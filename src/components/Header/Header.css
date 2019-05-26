@@ -4,15 +4,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px 0 50px;
+  padding: 70px 0 20px;
 }
 
 .app-banner a {
-  color: #000000;
+  color: var(--color-black);
 }
 
 .app-banner a:visited {
-  color: #000000;
+  color: var(--color-black);
   opacity: 1;
 }
 
