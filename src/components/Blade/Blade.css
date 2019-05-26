@@ -40,14 +40,23 @@
   position: relative;
 }
 
+.blade-description-inner {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
 .blade-name {
   position: relative;
   margin-top: 1.15rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .blade-info {
+  color: hsl(0, 0%, 30%);
   font-size: 0.75rem;
+  margin: 0;
+  margin-bottom: 0.25rem;
 }
 
 .blade-role {
@@ -83,5 +92,6 @@
     position: absolute;
     top: 0;
     right: 15px;
+    margin: 0.85rem;
   }
 }

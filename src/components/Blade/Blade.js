@@ -50,13 +50,15 @@ class Blade extends Component {
 
     return (
       <div className="blade-description">
-        <h2 className="blade-name"> {name}</h2>
-        <h3 className="blade-info">
-          <span className="blade-role">{role}</span> /{" "}
-          <span className="blade-type">{type}</span>
-        </h3>
-        <p>{weapon}</p>
-        {obtainment}
+        <div className="blade-description-inner">
+          <h2 className="blade-name"> {name}</h2>
+          <h3 className="blade-info">
+            <span className="blade-role">{role}</span> /{" "}
+            <span className="blade-type">{type}</span>
+          </h3>
+          <p>{weapon}</p>
+          {obtainment}
+        </div>
       </div>
     );
   };
